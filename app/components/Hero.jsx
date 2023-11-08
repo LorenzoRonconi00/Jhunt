@@ -2,7 +2,7 @@
 
 const Hero = () => {
     return (
-        <div className="z-10 h-screen flex flex-col justify-center items-center relative -mt-[50px] md:-mt-[100px]">
+        <div className="z-10 h-screen flex flex-col justify-center items-center relative -mt-[80px] lg:-mt-[200px]">
             <h1 className="text-4xl md:text-5xl font-bold mb-5 md:mb-14" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>Jhunt.</h1>
             <h2 className="text-lg md:text-4xl font-semibold text-center whitespace-normal break-words mb-6 md:mb-14 mx-5">L’assistente virtuale per la ricerca del tuo lavoro.</h2>
             <h3 className="text-base md:text-2xl font-light text-center whitespace-normal break-words mx-5">Risparmia tempo e sforzi nella tua ricerca del lavoro con l'IA avanzata.
