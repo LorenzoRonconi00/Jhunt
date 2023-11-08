@@ -1,21 +1,51 @@
-'use client';
+"use client";
+
+import Image from "next/image";
+
+const items = [
+  {
+    name: "Crea Curriculum",
+    link: "#",
+  },
+  {
+    name: "Per le Aziende",
+    link: "#",
+  },
+];
 
 const Navbar = () => {
-    return ( 
-        <nav className="fixed z-50 top-1 md:top-8 h-20 w-screen flex justify-between items-center">
-            <div className="flex justify-start items-center ml-6 lg:ml-20">
-                <img src="/images/logo.png" alt="Logo" className="w-[55px] md:w-[70px] cursor-pointer"/>
-                <div className="hidden md:block md:m-20 md:font-bold md:text-black md:text-[24px] whitespace-nowrap">
-                    <a href="#">Crea Curriculum</a>
-                    <a href="#" className="ml-20">Per le Aziende</a>
-                </div>
-            </div>
-            <div className="flex items-center mr-6 md:mr-20">
-                <button className="hidden md:block bg-transparent text-[#1f1695] py-3 px-8 border-[3px] border-[#7676767b] font-semibold">ISCRIVITI</button>
-                <img src="/images/menu-hamburger.png" alt="Menu" className="block md:hidden w-[35px]"/>
-            </div>
-        </nav>
-     );
-}
- 
+  return (
+    <nav className="fixed z-50 top-0 w-screen flex justify-between items-center border-black/20 border-b py-2 px-5">
+      <div className="flex justify-start items-center gap-10">
+        <div className="relative w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14">
+          <Image
+            src="/images/logo.png"
+            alt="Logo"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
+        <div className=" hidden md:flex gap-10 md:font-bold md:text-black md:text-[24px] whitespace-nowrap">
+          {items.map((item, index) => (
+            <a href={item.link} key={index}>
+              {item.name}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex items-center">
+        <button className="hidden md:block bg-transparent text-[#1f1695] py-3 px-8 border-[2px] border-black/20 font-semibold">
+          ISCRIVITI
+        </button>
+        <img
+          src="/images/menu-hamburger.png"
+          alt="Menu"
+          className="block md:hidden w-[35px]"
+        />
+      </div>
+    </nav>
+  );
+};
+
 export default Navbar;
