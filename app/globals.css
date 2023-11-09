@@ -2,3 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+}
+
+.ant-switch{
+    background: #F95225;
+    @apply hover:!bg-[#e93504];
+}
+
+.ant-switch-checked{
+    background: #1f1695 !important;
+    @apply hover:!bg-[#100a68];
+}
