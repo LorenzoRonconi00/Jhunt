@@ -2,6 +2,7 @@
 
 import { ConfigProvider, Switch } from "antd";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 
 const filtri = [
@@ -19,6 +20,7 @@ const filtri = [
 
 const Hero = () => {
 
+  const router = useRouter();
   const [checked, setChecked] = useState(false);
 
   const toggle = () => {
@@ -51,7 +53,9 @@ const Hero = () => {
           placeholder="Cosa cerchi?"
           className="w-full font-light border-2 border-[#7676767b] border-r-0 rounded-l-[10px] p-4 md:p-6"
         />
-        <button className="bg-[#1F1695] h-full text-white text-[16px] md:text-[24px] font-bold text-center px-8 md:px-16 border-2 border-[#1F1695] rounded-r-[10px] border-l-0">
+        <button 
+        onClick={() => router.push("/search")}
+        className="bg-[#1F1695] h-full text-white text-[16px] md:text-[24px] font-bold text-center px-8 md:px-16 border-2 border-[#1F1695] rounded-r-[10px] border-l-0">
           Trova
         </button>
       </div>

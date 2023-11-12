@@ -19,3 +19,11 @@ body{
     background: #1f1695 !important;
     @apply hover:!bg-[#100a68];
 }
+
+.rightSectionShadowLG{
+    box-shadow: -7px 4px 4px #00000040;
+}
+
+.rightSectionShadow{
+    box-shadow: 0px -4px 4px #00000040;
+}
