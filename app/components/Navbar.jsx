@@ -58,7 +58,7 @@ const Navbar = () => {
         <div className="flex justify-start items-center lg:gap-20 md:gap-10">
           <div className="relative w-10 md:w-20 lg:w-36 h-20">
             <Image
-              src={"/images/logo-jhunt-text.svg"}
+              src={"/images/logo-jhunt-notext.svg"}
               alt="Logo"
               layout="fill"
               objectFit="contain"
