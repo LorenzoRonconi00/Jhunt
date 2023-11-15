@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Blob1 from "./Blob1";
+import FooterSearch from "./FooterSearch";
 
 const items = [
   {
@@ -42,8 +44,8 @@ const Filters = () => {
 
   return (
     <div className="hidden lg:fixed w-screen z-1 top-0 lg:flex lg:flex-col px-[60px]">
-      <div className="absolute left-[500px]">
-        <Image src="images/Vector.svg" alt="logo" width={215} height={200} />
+      <div className="absolute left-[400px] -top-[100px]">
+        <Blob1 />
       </div>
       <div className="flex justify-start pb-10 mt-10">
         <Image src="images/logo-jhunt-notext.svg" alt="logo" width={50} height={50} onClick={() => router.push("/")} className="cursor-pointer" />
@@ -130,8 +132,8 @@ const Filters = () => {
             {/* STIPENDIO */}
             {index === 4 && (
               <div className="mx-14">
-                <input className="bg-[#1F1695] text-white text-[15px] font-semibold mt-3 flex items-center px-5 py-[8px] rounded-[8px] gap-2 w-[100px]"
-                  type="number" inputMode="numeric" placeholder="Min" />
+                <input className="bg-[#1F1695] text-white text-[15px] font-semibold mt-3 flex items-center px-5 py-[8px] rounded-[8px] gap-2 w-[100px] [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                  type="number" inputMode="numeric" placeholder="Min €" />
               </div>
             )}
             {/* PUBBLICATO */}
@@ -153,8 +155,8 @@ const Filters = () => {
         ))}
       </div>
 
-      <footer className="fixed bottom-0 left-0 z-[-1]">
-        <Image src="images/Blobs.svg" alt="Blobs" width={800} height={300} />
+      <footer className="fixed -bottom-[160px] -left-[50px] z-[-1]">
+        <FooterSearch />
       </footer>
     </div>
   );
