@@ -155,7 +155,7 @@ const Filters = () => {
         ))}
       </div>
 
-      <footer className="fixed -bottom-[160px] -left-[50px] z-[-1]">
+      <footer className="fixed -bottom-[300px] -left-[250px] z-[-1]">
         <FooterSearch />
       </footer>
     </div>
