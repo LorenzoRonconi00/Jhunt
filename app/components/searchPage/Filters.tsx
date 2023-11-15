@@ -2,8 +2,11 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+
 import Blob1 from "./Blob1";
 import FooterSearch from "./FooterSearch";
+
 
 const items = [
   {
@@ -26,7 +29,7 @@ const items = [
     opt2: "Internazionale",
   },
   {
-    icon: "images/contratto.svg",
+    icon: "/images/contratto2.png",
     name: "CONTRATTO",
   },
   {
@@ -38,6 +41,25 @@ const items = [
     name: "PUBBLICATO",
   }
 ];
+
+
+const ButtonFilters = () => {
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = () => {
+    setIsClicked(!isClicked);
+  };
+
+  return (
+    <>
+      <button className="bg-transparent border-2 border-black rounded-full h-[20px] w-[20px] flex items-center justify-center" onClick={handleClick}>
+        {isClicked && (
+          <span className="absolute h-3 w-3 bg-black rounded-full" />
+        )}
+      </button>
+    </>
+  );
+}
 
 const Filters = () => {
   const router = useRouter();
@@ -63,15 +85,15 @@ const Filters = () => {
             {index === 0 && (
               <div className="text-black text-[18px] font-semibold mx-14">
                 <div className="flex flex-row items-center gap-5 py-1">
-                  <button className="bg-transparent border-2 border-black rounded-full h-[20px] w-[20px]" />
+                  <ButtonFilters />
                   <h2>{item.opt1}</h2>
                 </div>
                 <div className="flex flex-row items-center gap-5 py-1">
-                  <button className="bg-transparent border-2 border-black rounded-full h-[20px] w-[20px]" />
+                  <ButtonFilters />
                   <h2>{item.opt2}</h2>
                 </div>
                 <div className="flex flex-row items-center gap-5 py-1">
-                  <button className="bg-transparent border-2 border-black rounded-full h-[20px] w-[20px]" />
+                  <ButtonFilters />
                   <h2>{item.opt3}</h2>
                 </div>
               </div>
@@ -80,11 +102,11 @@ const Filters = () => {
             {index === 1 && (
               <div className="text-black text-[18px] font-semibold mx-14">
                 <div className="flex flex-row items-center gap-5 py-1">
-                  <button className="bg-transparent border-2 border-black rounded-full h-[20px] w-[20px]" />
+                  <ButtonFilters />
                   <h2>{item.opt1}</h2>
                 </div>
                 <div className="flex flex-row items-center gap-5 py-1">
-                  <button className="bg-transparent border-2 border-black rounded-full h-[20px] w-[20px]" />
+                  <ButtonFilters />
                   <h2>{item.opt2}</h2>
                 </div>
               </div>
@@ -94,11 +116,11 @@ const Filters = () => {
               <div className="mx-14">
                 <div className="text-black text-[18px] font-semibold">
                   <div className="flex flex-row items-center gap-5 py-1">
-                    <button className="bg-transparent border-2 border-black rounded-full h-[20px] w-[20px]" />
+                    <ButtonFilters />
                     <h2>{item.opt1}</h2>
                   </div>
                   <div className="flex flex-row items-center gap-5 py-1">
-                    <button className="bg-transparent border-2 border-black rounded-full h-[20px] w-[20px]" />
+                    <ButtonFilters />
                     <h2>{item.opt2}</h2>
                   </div>
                 </div>
