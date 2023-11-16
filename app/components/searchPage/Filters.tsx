@@ -66,10 +66,10 @@ const Filters = () => {
 
   return (
     <div className="hidden lg:fixed w-screen z-1 top-0 lg:flex lg:flex-col px-[60px]">
-      <div className="absolute left-[400px] -top-[100px]">
+      <div className="absolute left-[450px] -top-[100px]">
         <Blob1 />
       </div>
-      <div className="flex justify-start pb-10 mt-10">
+      <div className="flex justify-start pb-10 mt-5">
         <Image src="images/logo-jhunt-notext.svg" alt="logo" width={50} height={50} onClick={() => router.push("/")} className="cursor-pointer" />
       </div>
       <div className="flex flex-col px-14 gap-y-8">
