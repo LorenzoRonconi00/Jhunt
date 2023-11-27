@@ -24,15 +24,7 @@ body{
     box-shadow: -7px 4px 4px #00000040;
 }
 
-
-@media screen and (min-width: 1280px) {
-    .rightSectionShadowLG{
-        box-shadow: -7px 4px 4px #00000040;
-    }
+.rightSectionShadow{
+    box-shadow: 0px -4px 4px #00000040;
 }
 
-@media screen and (max-width: 1024px) {
-    .rightSectionShadow{
-        box-shadow: 0px -4px 4px #00000040;
-    }
-}
