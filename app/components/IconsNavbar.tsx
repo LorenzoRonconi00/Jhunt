@@ -4,6 +4,17 @@ import Image from "next/image";
 import { useState } from "react";
 import DropdownMenu from "./DropdownMenu";
 
+const items = [
+    {
+        source: "/images/messaggi.svg",
+        number: 20
+    },
+    {
+        source: "/images/notifiche.svg",
+        number: 30
+    }
+]
+
 const IconsNavbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
@@ -13,47 +24,42 @@ const IconsNavbar = () => {
 
     return (
         <div>
-            <div className="flex flex-row items-center px-5">
-                <div className="flex gap-32">
-                    <div className="hidden relative h-[70px] w-[70px] rounded-full bg-[#bbbbbb] lg:flex items-center justify-center cursor-pointer">
-                        <Image
-                            src="/images/messaggi.svg"
-                            alt="Messaggi"
-                            width={40}
-                            height={40}
-                        />
-                        <div className="h-[30px] w-[30px] bg-[#1F1695] rounded-full absolute -top-2 -right-2 flex items-center justify-center">
-                            <h1 className="text-white font-bold text-[12px]">20</h1>
+            <div className="flex flex-row items-center xl:px-5 md:px-3">
+                <div className="flex xl:gap-32 gap-20">
+                    {items.map((item, index) => (
+                        <div className="hidden relative xl:h-[70px] md:h-[50px] xl:w-[70px] md:w-[50px] rounded-full bg-[#bbbbbb] md:flex items-center justify-center cursor-pointer"
+                            key={index}>
+                            <div className="xl:h-[40px] xl:w-[40px] md:h-[30px] md:w-[30px]">
+                                <Image
+                                    src={item.source}
+                                    alt=""
+                                    width={40}
+                                    height={40}
+                                />
+                            </div>
+                            <div className="xl:h-[30px] xl:w-[30px] md:h-[20px] md:w-[20px] bg-[#1F1695] rounded-full absolute xl:-top-2 xl:-right-2 -top-1 -right-1 flex items-center justify-center">
+                                <h1 className="text-white font-bold xl:text-[12px] md:text-[10px]">20</h1>
+                            </div>
                         </div>
-                    </div>
-                    <div className="hidden relative h-[70px] w-[70px] rounded-full bg-[#bbbbbb] lg:flex items-center justify-center cursor-pointer">
+                    ))}
+                    <div className="md:block hidden cursor-pointer xl:w-[70px] xl:h-[70px] md:w-[50px] md:h-[50px]">
                         <Image
-                            src="/images/notifiche.svg"
-                            alt="Notifiche"
-                            width={50}
-                            height={40}
+                            src="/images/profile.svg"
+                            alt=""
+                            width={70}
+                            height={70}
+                            onClick={handleMenu}
                         />
-                        <div className="h-[30px] w-[30px] bg-[#1F1695] rounded-full absolute -top-2 -right-2 flex items-center justify-center">
-                            <h1 className="text-white font-bold text-[12px]">31</h1>
-                        </div>
                     </div>
-                    <Image
-                        src="/images/profile.svg"
-                        alt="Profilo"
-                        width={70}
-                        height={70}
-                        className="md:block hidden cursor-pointer"
-                        onClick={handleMenu}
-                    />
                 </div>
                 {/* USER INFO */}
-                <div className="hidden lg:flex flex-col px-7">
-                    <h1 className="text-left font-bold">Federico Cervelli</h1>
-                    <h2 className="text-left text-[#767676] text-[15px]">Lavoratore</h2>
+                <div className="hidden md:flex flex-col xl:px-7 md:px-5">
+                    <h1 className="text-left font-bold md:text-[15px]">Federico Cervelli</h1>
+                    <h2 className="text-left text-[#767676] md:text-[15px]">Lavoratore</h2>
                 </div>
             </div>
             {menuOpen && (
-                <div className="hidden lg:block absolute right-0 px-36 py-5 my-10">
+                <div className="hidden md:block absolute right-0 xl:px-36 xl:py-5 md:px-28 md:py-3 xl:my-10 md:my-5">
                     <DropdownMenu />
                 </div>
             )}

@@ -65,7 +65,7 @@ const Filters = () => {
   const router = useRouter();
 
   return (
-    <div className="hidden lg:fixed w-screen z-1 top-0 lg:flex lg:flex-col px-[60px]">
+    <div className="hidden xl:fixed xl:w-1/2 z-1 xl:top-0 xl:flex xl:flex-col xl:px-[60px]">
       <div className="absolute left-[450px] -top-[100px]">
         <Blob1 />
       </div>

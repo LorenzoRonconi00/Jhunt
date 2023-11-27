@@ -30,7 +30,7 @@ const items = [
 
 const DropdownMenu = () => {
     return (
-        <div className="relative rounded-[30px] border-4 bg-[white] shadow-2xl w-[300px] h-[400px]">
+        <div className="relative rounded-[30px] md:border-4 bg-[white] shadow-2xl md:w-[300px] md:h-[400px]">
             <div className="flex flex-col">
                 {items.map((item, index) => (
                     <div className="flex flex-row gap-x-4 items-center justify-end px-6 py-5" key={index}>
