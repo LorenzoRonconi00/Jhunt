@@ -10,6 +10,10 @@ body{
     -o-user-select: none;
 }
 
+*::-webkit-scrollbar{
+    display: none;
+}
+
 .ant-switch{
     background: #F95225;
     @apply hover:!bg-[#e93504];
@@ -24,7 +28,9 @@ body{
     box-shadow: -7px 4px 4px #00000040;
 }
 
-.rightSectionShadow{
-    box-shadow: 0px -4px 4px #00000040;
-}
 
+@media screen and (max-width: 1024px) {
+    .rightSectionShadow{
+        box-shadow: 0px -4px 4px #00000040;
+    }
+}

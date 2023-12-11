@@ -14,7 +14,7 @@ const RightSection = () => {
                 <div className="flex flex-col h-full">
                     <SearchBox />
                     <Suggestions />
-                    <div className="xl:hidden -bottom-[180px] relative md:mx-28 -z-10">
+                    <div className="xl:hidden md:-bottom-[50px] lg:-bottom-[80px]  lg:h-[200px] md:h-[150px] md:w-[800px] lg:mx-24 relative -z-10">
                         <FooterSmall />
                     </div>
                     <Results />

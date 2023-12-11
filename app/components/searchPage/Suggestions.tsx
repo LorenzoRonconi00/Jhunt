@@ -15,6 +15,18 @@ const items = [
   {
     name: "Programmer",
   },
+  {
+    name: "Programmer",
+  },
+  {
+    name: "Programmer",
+  },
+  {
+    name: "Programmer",
+  },
+  {
+    name: "Programmer",
+  },
 ];
 
 interface buttonSuggestionsProps {
@@ -34,7 +46,8 @@ const ButtonSuggestions: React.FC<buttonSuggestionsProps> = ({
     <div
       key={key}
       onClick={handleClick}
-      className={`flex flex-col justify-center ${isClicked ? "bg-[#1f1695] text-white" : "bg-[#dff4fb] text-[#1f1695]"}  rounded-[30px] whitespace-nowrap xl:px-7 md:px-5 py-2`}
+      className={`flex flex-col justify-center ${isClicked ? "bg-[#1f1695] text-white" : "bg-[#dff4fb] text-[#1f1695]"}  rounded-[30px] whitespace-nowrap xl:px-7 md:px-5 py-2
+      cursor-pointer`}
     >
       <h1 className="xl:text-[18px] md:text-[16px] font-bold">{name}</h1>
     </div>
@@ -57,7 +70,7 @@ function Suggestions() {
           <div className="flex flex-col justify-center whitespace-nowrap">
             <h1 className="md:text-[16px] font-semibold text-[#767676]">Suggerimenti IA</h1>
           </div>
-          <div className="flex md:gap-5">
+          <div className="flex md:gap-5 overflow-x-scroll md:w-[600px] lg:w-[800px] xl:w-full">
             {items.map((item, index) => (
               <ButtonSuggestions
                 key={index}

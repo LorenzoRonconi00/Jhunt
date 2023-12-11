@@ -27,14 +27,14 @@ const IconsNavbar = () => {
             <div className="flex flex-row items-center xl:px-5 md:px-3">
                 <div className="flex xl:gap-32 gap-20">
                     {items.map((item, index) => (
-                        <div className="hidden relative xl:h-[70px] md:h-[50px] xl:w-[70px] md:w-[50px] rounded-full bg-[#bbbbbb] md:flex items-center justify-center cursor-pointer"
+                        <div className="hidden relative xl:h-[60px] md:h-[50px] xl:w-[60px] md:w-[50px] rounded-full bg-[#bbbbbb] md:flex items-center justify-center cursor-pointer"
                             key={index}>
-                            <div className="xl:h-[40px] xl:w-[40px] md:h-[30px] md:w-[30px]">
+                            <div className="xl:h-[30px] xl:w-[30px] md:h-[30px] md:w-[30px]">
                                 <Image
                                     src={item.source}
                                     alt=""
-                                    width={40}
-                                    height={40}
+                                    width={30}
+                                    height={30}
                                 />
                             </div>
                             <div className="xl:h-[30px] xl:w-[30px] md:h-[20px] md:w-[20px] bg-[#1F1695] rounded-full absolute xl:-top-2 xl:-right-2 -top-1 -right-1 flex items-center justify-center">
@@ -42,12 +42,12 @@ const IconsNavbar = () => {
                             </div>
                         </div>
                     ))}
-                    <div className="md:block hidden cursor-pointer xl:w-[70px] xl:h-[70px] md:w-[50px] md:h-[50px]">
+                    <div className="md:block hidden cursor-pointer xl:w-[60px] xl:h-[60px] md:w-[50px] md:h-[50px]">
                         <Image
                             src="/images/profile.svg"
                             alt=""
-                            width={70}
-                            height={70}
+                            width={60}
+                            height={60}
                             onClick={handleMenu}
                         />
                     </div>

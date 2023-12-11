@@ -29,16 +29,16 @@ const Hero = () => {
 
 
   return (
-    <div className="z-10 h-screen flex flex-col justify-start md:justify-center pt-[90px] md:pt-0 items-center relative px-5">
+    <div className="z-10 h-screen flex flex-col justify-start md:justify-center pt-[190px] md:pt-0 items-center relative px-5">
       {/**Title */}
       <h1
-        className="text-7xl md:text-8xl font-bold mb-2"
+        className="text-4xl md:text-8xl font-bold mb-2"
         style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.3)" }}
       >
         Jhunt.
       </h1>
       {/**Subtitles */}
-      <h2 className="text-2xl md:text-4xl  font-semibold text-center whitespace-normal break-words mb-5">
+      <h2 className="text-xl md:text-4xl  font-semibold text-center whitespace-normal break-words mb-5">
         Il tuo assistente virtuale per la ricerca del lavoro.
       </h2>
       <h3 className="hidden md:block text-base md:text-2xl font-light text-center whitespace-normal break-words mb-10">
