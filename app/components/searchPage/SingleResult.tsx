@@ -19,7 +19,7 @@ const SingleResult: React.FC<SingleResult> = ({
     posizione,
 }) => {
     return (
-        <div className="w-full h-full border-2 shadow-2xl bg-white rounded-[10px] flex justify-between cursor-pointer">
+        <div className="w-full h-full border-2 bg-white rounded-[10px] flex justify-between cursor-pointer">
             <div className="flex flex-col justify-start lg:px-10 md:w-[250px] lg:py-5 lg:gap-y-3 md:px-8 md:py-5 md:gap-y-2 overflow-hidden">
                 <h2 className="text-[#737373] font-semibold lg:text-[16px] md:text-[14px]">{azienda}</h2>
                 <h1 className="text-black lg:text-[24px] md:text-[20px] font-bold">{ruolo}</h1>

@@ -141,8 +141,8 @@ function SearchBox() {
           </div>
         </div>
         {/* divisore */}
-        <div className="w-full h-[1px] bg-black/25 my-5"></div>
-        <div className={`flex ${clickedButtons === 1 ? "flex-col" : "grid grid-cols-2 gap-x-5"} overflow-y-auto gap-y-5 py-5 lg:max-h-[730px] md:max-h-[500px] xl:max-h-[800px]`}>
+        <div className="w-full h-[1px] mt-5"></div>
+        <div className={`flex ${clickedButtons === 1 ? "flex-col" : "grid grid-cols-2 gap-x-5"}  gap-y-5 py-5`}>
           {results.map((result, index) => (
             <SingleResult
               azienda={result.azienda}
@@ -156,12 +156,7 @@ function SearchBox() {
           ))}
         </div>
       </div>
-      {/* <Footer /> */}
-      <div className="absolute bg-white w-full md:h-[50px] bottom-0 rounded-t-[30px] rightSectionShadow">
-            <div className="flex justify-center items-center h-full">
-              <DownOutlined />
-            </div>
-      </div>
+      
     </>
   );
 }
